@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 13: Объекты - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">JavaScript Основы</span>
+            <h1>Урок 13: Объекты</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 40 минут</span>
+                <span>📊 Средний</span>
+                <span>📄 JavaScript</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">🏗️ Создание объектов</h2>
+            <div class="code-block">
+// Литерал объекта
+const person = {
+    name: "Иван",
+    age: 25,
+    greet: function() {
+        console.log(`Привет, ${this.name}!`);
+    }
+};
+
+// Конструктор
+const person2 = new Object();
+person2.name = "Анна";
+
+// Object.create
+const proto = { greet() { console.log("Привет!"); } };
+const obj = Object.create(proto);
+            </div>
+            <h2 class="section-title">🔑 Доступ к свойствам</h2>
+            <div class="code-block">
+const user = {
+    name: "Иван",
+    "user age": 25
+};
+
+// Точечная нотация
+user.name;           // "Иван"
+
+// Квадратные скобки
+user["name"];        // "Иван"
+user["user age"];    // 25 (только так для составных ключей)
+
+// Динамический доступ
+const key = "name";
+user[key];           // "Иван"
+            </div>
+            <h2 class="section-title">🛠️ Методы объектов</h2>
+            <div class="code-block">
+const obj = { a: 1, b: 2, c: 3 };
+
+// Ключи, значения, записи
+Object.keys(obj);      // ["a", "b", "c"]
+Object.values(obj);    // [1, 2, 3]
+Object.entries(obj);   // [["a", 1], ["b", 2], ["c", 3]]
+
+// Копирование
+const copy = Object.assign({}, obj);
+const copy2 = { ...obj }; // Spread оператор
+
+// Слияние
+const merged = { ...obj, d: 4 };
+            </div>
+            <h2 class="section-title">🔒 Дескрипторы свойств</h2>
+            <div class="code-block">
+const obj = {};
+
+Object.defineProperty(obj, "name", {
+    value: "Иван",
+    writable: true,      // Можно изменять
+    enumerable: true,    // Видно в перечислении
+    configurable: true   // Можно удалить/изменить
+});
+
+// Геттеры и сеттеры
+const user = {
+    _name: "Иван",
+    get name() { return this._name; },
+    set name(value) { this._name = value; }
+};
+            </div>
+            <h2 class="section-title">🔄 Методы объекта</h2>
+            <div class="code-block">
+const calculator = {
+    result: 0,
+    
+    add(num) {
+        this.result += num;
+        return this; // Цепочка вызовов
+    },
+    
+    multiply(num) {
+        this.result *= num;
+        return this;
+    }
+};
+
+calculator.add(5).multiply(2).result; // 10
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Создайте объект с разными свойствами</li>
+                <li>Используйте методы Object.keys, values, entries</li>
+                <li>Добавьте геттеры и сеттеры</li>
+                <li>Скопируйте и объедините объекты</li>
+                <li>Создайте метод объекта</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson12.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson14.html" class="nav-btn nav-btn-next">Следующий →</a>
+        </div>
+    </div>
+</body>
+</html>

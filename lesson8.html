@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 8: CSS Grid - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">CSS Layout</span>
+            <h1>Урок 8: CSS Grid</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 45 минут</span>
+                <span>📊 Сложный</span>
+                <span>📄 CSS</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">🎯 Основы Grid</h2>
+            <p>CSS Grid — это двумерная система компоновки:</p>
+            <div class="code-block">
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px auto 100px;
+    gap: 20px;
+}
+            </div>
+            <h2 class="section-title">📐 Grid Template</h2>
+            <div class="code-block">
+/* Фиксированные и адаптивные колонки */
+.grid {
+    grid-template-columns: 200px 1fr 300px;
+}
+
+/* Повторяющиеся колонки */
+.grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Минимальный размер */
+.grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+            </div>
+            <h2 class="section-title">🔲 Grid Areas</h2>
+            <div class="code-block">
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+            </div>
+            <h2 class="section-title">📍 Позиционирование элементов</h2>
+            <div class="code-block">
+.item {
+    grid-column: 1 / 3;
+    /* От 1 до 3 линии */
+    grid-row: 1 / 2;
+}
+
+.item {
+    grid-column: span 2;
+    /* Занимает 2 колонки */
+    grid-row: span 2;
+    /* Занимает 2 строки */
+}
+            </div>
+            <h2 class="section-title">⚙️ Выравнивание</h2>
+            <div class="code-block">
+.container {
+    justify-items: center; /* Горизонтальное */
+    align-items: center;   /* Вертикальное */
+}
+
+.item {
+    justify-self: start;   /* Для элемента */
+    align-self: end;
+}
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Создайте grid с 3 колонками</li>
+                <li>Используйте grid-template-areas</li>
+                <li>Настройте позиционирование элементов</li>
+                <li>Создайте адаптивный grid</li>
+                <li>Примените выравнивание</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson7.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson9.html" class="nav-btn nav-btn-next">Следующий →</a>
+        </div>
+    </div>
+</body>
+</html>

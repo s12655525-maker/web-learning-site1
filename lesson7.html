@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 7: Flexbox - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">CSS Layout</span>
+            <h1>Урок 7: Flexbox</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 40 минут</span>
+                <span>📊 Средний</span>
+                <span>📄 CSS</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">📦 Основы Flexbox</h2>
+            <p>Flexbox — это мощный метод для создания гибких макетов:</p>
+            <div class="code-block">
+.container {
+    display: flex;
+    flex-direction: row; /* row | column */
+    justify-content: center; /* flex-start | flex-end | center | space-between | space-around */
+    align-items: center; /* flex-start | flex-end | center | stretch */
+    gap: 20px;
+}
+            </div>
+            <h2 class="section-title">🔄 Flex Direction</h2>
+            <div class="code-block">
+.flex-row {
+    flex-direction: row;
+}      /* Горизонтально */
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-column {
+    flex-direction: column;
+} /* Вертикально */
+
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+            </div>
+            <h2 class="section-title">⚖️ Flex Grow, Shrink, Basis</h2>
+            <div class="code-block">
+.item {
+    flex-grow: 1;     /* Растягивание */
+    flex-shrink: 0;   /* Сжатие */
+    flex-basis: auto; /* Начальный размер */
+}
+
+/* Сокращённая запись */
+.item {
+    flex: 1 0 auto;
+}
+            </div>
+            <h2 class="section-title">📍 Выравнивание элементов</h2>
+            <div class="code-block">
+.container {
+    align-items: center; /* Вертикальное */
+    align-self: flex-start; /* Для отдельного элемента */
+}
+
+.container {
+    justify-content: space-between; /* Горизонтальное */
+}
+            </div>
+            <h2 class="section-title">🔄 Flex Wrap</h2>
+            <div class="code-block">
+.container {
+    flex-wrap: wrap; /* nowrap | wrap | wrap-reverse */
+    align-content: center; /* Выравнивание строк */
+}
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Создайте flex-контейнер с 5 элементами</li>
+                <li>Используйте justify-content</li>
+                <li>Примените align-items</li>
+                <li>Настройте flex-grow для элементов</li>
+                <li>Создайте адаптивный макет с flex-wrap</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson6.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson8.html" class="nav-btn nav-btn-next">Следующий →</a>
+        </div>
+    </div>
+</body>
+</html>

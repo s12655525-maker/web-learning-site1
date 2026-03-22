@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 9: Введение в JavaScript - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">JavaScript Основы</span>
+            <h1>Урок 9: Введение в JavaScript</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 30 минут</span>
+                <span>📊 Лёгкий</span>
+                <span>📄 JavaScript</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">⚡ Что такое JavaScript?</h2>
+            <p><strong>JavaScript</strong> — это мощный язык программирования, который делает веб-страницы интерактивными. Если HTML — это скелет, а CSS — это одежда, то JavaScript — это мозг сайта.</p>
+            <p>JavaScript позволяет:</p>
+            <ul>
+                <li>🎮 <strong>Реагировать на действия пользователя</strong> — клики, ввод текста, прокрутка</li>
+                <li>🔄 <strong>Изменять контент</strong> — добавлять, удалять, изменять элементы</li>
+                <li>🎨 <strong>Анимировать</strong> — создавать плавные переходы и анимации</li>
+                <li>💾 <strong>Сохранять данные</strong> — работать с cookie и localStorage</li>
+                <li>🌐 <strong>Общаться с сервером</strong> — отправлять и получать данные</li>
+            </ul>
+            
+            <h2 class="section-title">📝 Подключение JavaScript</h2>
+            <div class="code-block">
+&lt;!-- Внешний файл (рекомендуется) --&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+
+&lt;!-- Внутри HTML --&gt;
+&lt;script&gt;
+    console.log("Привет, мир!");
+&lt;/script&gt;
+
+&lt;!-- В атрибуте (не рекомендуется) --&gt;
+&lt;button onclick="alert('Привет!')"&gt;Нажми&lt;/button&gt;
+            </div>
+            
+            <h2 class="section-title">🚀 Первый код</h2>
+            <div class="code-block">
+// Комментарий в JavaScript
+
+// Вывод в консоль
+console.log("Привет, мир!");
+
+// Вывод на экран
+alert("Добро пожаловать!");
+
+// Переменные
+let name = "Иван";
+let age = 25;
+
+// Вывод переменных
+console.log(name);
+console.log(age);
+            </div>
+            
+            <h2 class="section-title">🎯 Основные типы данных</h2>
+            <div class="code-block">
+// Строка
+let text = "Привет";
+
+// Число
+let number = 42;
+
+// Логическое значение
+let isTrue = true;
+
+// Массив
+let arr = [1, 2, 3];
+
+// Объект
+let obj = { name: "Иван", age: 25 };
+            </div>
+            
+            <h2 class="section-title">🔗 Работа с DOM</h2>
+            <div class="code-block">
+// Найти элемент
+const button = document.getElementById("myButton");
+
+// Добавить обработчик событий
+button.addEventListener("click", function() {
+    alert("Кнопка нажата!");
+});
+
+// Изменить текст
+document.querySelector("h1").textContent = "Новый текст";
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Подключите JavaScript к HTML странице</li>
+                <li>Выведите сообщение в консоль</li>
+                <li>Создайте переменные разных типов</li>
+                <li>Добавьте кнопку с обработчиком событий</li>
+                <li>Измените текст элемента на странице</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson8.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson10.html" class="nav-btn nav-btn-next">Следующий →</a>
+        </div>
+    </div>
+</body>
+</html>

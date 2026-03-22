@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 11: Функции - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">JavaScript Основы</span>
+            <h1>Урок 11: Функции</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 40 минут</span>
+                <span>📊 Средний</span>
+                <span>📄 JavaScript</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">🔧 Объявление функций</h2>
+            <div class="code-block">
+// Function Declaration
+function greet(name) {
+    return `Привет, ${name}!`;
+}
+
+// Function Expression
+const greet2 = function(name) {
+    return `Привет, ${name}!`;
+};
+
+// Arrow Function
+const greet3 = (name) => `Привет, ${name}!`;
+const greet4 = name => `Привет, ${name}!`; // Краткая форма
+            </div>
+            <h2 class="section-title">📥 Параметры и аргументы</h2>
+            <div class="code-block">
+function sum(a, b = 0) {    // b - значение по умолчанию
+    return a + b;
+}
+
+sum(5, 3);      // 8
+sum(5);         // 5
+
+// Остаточные параметры
+function sumAll(...numbers) {
+    return numbers.reduce((acc, num) => acc + num, 0);
+}
+
+sumAll(1, 2, 3, 4); // 10
+            </div>
+            <h2 class="section-title">🔄 Область видимости</h2>
+            <div class="code-block">
+let globalVar = "глобальная";
+
+function example() {
+    let localVar = "локальная";
+    console.log(globalVar); // Доступна
+    console.log(localVar);  // Доступна
+}
+
+console.log(localVar); // Ошибка! Не доступна
+            </div>
+            <h2 class="section-title">⚡ Замыкания</h2>
+            <div class="code-block">
+function createCounter() {
+    let count = 0;
+    return function() {
+        count++;
+        return count;
+    };
+}
+
+const counter = createCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+            </div>
+            <h2 class="section-title">🎯 Методы функций</h2>
+            <div class="code-block">
+// call
+function greet(greeting, punctuation) {
+    console.log(`${greeting}, ${this.name}${punctuation}`);
+}
+
+const person = { name: "Иван" };
+greet.call(person, "Привет", "!"); // Привет, Иван!
+
+// apply
+greet.apply(person, ["Здравствуйте", "."]); // Здравствуйте, Иван.
+
+// bind
+const boundGreet = greet.bind(person);
+boundGreet("Добрый день", "?"); // Добрый день, Иван?
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Создайте функцию разных типов</li>
+                <li>Используйте параметры по умолчанию</li>
+                <li>Примените остаточные параметры</li>
+                <li>Создайте замыкание</li>
+                <li>Используйте методы call, apply, bind</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson10.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson12.html" class="nav-btn nav-btn-next">Следующий →</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 18: Адаптивный дизайн - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">CSS Продвинутый</span>
+            <h1>Урок 18: Адаптивный дизайн</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 45 минут</span>
+                <span>📊 Средний</span>
+                <span>📄 CSS</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">📱 Media Queries</h2>
+            <div class="code-block">
+/* Минимальная ширина */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Максимальная ширина */
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Диапазон */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 100%;
+    }
+}
+            </div>
+            <h2 class="section-title">🖥️ Точки останова (Breakpoints)</h2>
+            <div class="code-block">
+/* Mobile First */
+.container {
+    width: 100%;
+    padding: 15px;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+            </div>
+            <h2 class="section-title">📐 Относительные единицы</h2>
+            <div class="code-block">
+.container {
+    width: 90%;           /* Проценты */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text {
+    font-size: 1rem;      /* Относительно корня */
+    padding: 1em;         /* Относительно элемента */
+    margin: 2rem 0;
+}
+
+img {
+    max-width: 100%;      /* Адаптивные изображения */
+    height: auto;
+}
+            </div>
+            <h2 class="section-title">🔄 Адаптивная сетка</h2>
+            <div class="code-block">
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Автоматическая адаптация */
+.grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+            </div>
+            <h2 class="section-title">📱 Мобильная навигация</h2>
+            <div class="code-block">
+/* Десктоп */
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+    }
+}
+            </div>
+            <h2 class="section-title">🖼️ Адаптивные изображения</h2>
+            <div class="code-block">
+/* HTML */
+&lt;picture&gt;
+    &lt;source media="(min-width: 1024px)" srcset="large.jpg"&gt;
+    &lt;source media="(min-width: 768px)" srcset="medium.jpg"&gt;
+    &lt;img src="small.jpg" alt="Адаптивное изображение"&gt;
+&lt;/picture&gt;
+
+/* CSS */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Создайте адаптивную сетку</li>
+                <li>Используйте media queries</li>
+                <li>Примените относительные единицы</li>
+                <li>Сделайте адаптивную навигацию</li>
+                <li>Добавьте адаптивные изображения</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson17.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson19.html" class="nav-btn nav-btn-next">Следующий →</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 12: Массивы - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">JavaScript Основы</span>
+            <h1>Урок 12: Массивы</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 45 минут</span>
+                <span>📊 Средний</span>
+                <span>📄 JavaScript</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">📋 Создание массивов</h2>
+            <div class="code-block">
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = new Array(1, 2, 3);
+const arr3 = Array.of(1, 2, 3);
+const arr4 = Array(5).fill(0); // [0, 0, 0, 0, 0]
+            </div>
+            <h2 class="section-title">🔍 Основные методы</h2>
+            <div class="code-block">
+const fruits = ["яблоко", "банан", "груша"];
+
+// Длина
+fruits.length; // 3
+
+// Добавление/удаление
+fruits.push("апельсин");     // Добавить в конец
+fruits.pop();                // Удалить с конца
+fruits.unshift("киви");      // Добавить в начало
+fruits.shift();              // Удалить с начала
+
+// Поиск
+fruits.indexOf("банан");     // 1
+fruits.includes("груша");    // true
+fruits.find(item => item.length > 5); // "яблоко"
+            </div>
+            <h2 class="section-title">🔄 Итерация</h2>
+            <div class="code-block">
+const numbers = [1, 2, 3, 4, 5];
+
+// forEach
+numbers.forEach((num, index) => {
+    console.log(`Индекс ${index}: ${num}`);
+});
+
+// map - создать новый массив
+const doubled = numbers.map(num => num * 2); // [2, 4, 6, 8, 10]
+
+// filter - отфильтровать
+const evens = numbers.filter(num => num % 2 === 0); // [2, 4]
+
+// reduce - свёртка
+const sum = numbers.reduce((acc, num) => acc + num, 0); // 15
+            </div>
+            <h2 class="section-title">✂️ Методы изменения</h2>
+            <div class="code-block">
+const arr = [1, 2, 3, 4, 5];
+
+// slice - вырезать (не изменяет оригинал)
+arr.slice(1, 3);    // [2, 3]
+
+// splice - удалить/вставить (изменяет оригинал)
+arr.splice(1, 2);   // Удалить 2 элемента с индекса 1
+arr.splice(1, 0, 10); // Вставить 10 на позицию 1
+
+// concat - объединение
+const arr2 = [6, 7];
+const combined = arr.concat(arr2); // [1, 2, 3, 4, 5, 6, 7]
+            </div>
+            <h2 class="section-title">🔧 Сортировка</h2>
+            <div class="code-block">
+const nums = [3, 1, 4, 1, 5, 9];
+
+nums.sort();                    // [1, 1, 3, 4, 5, 9] (по строкам)
+nums.sort((a, b) => a - b);     // [1, 1, 3, 4, 5, 9] (по числам)
+nums.reverse();                 // [9, 5, 4, 3, 1, 1]
+
+const words = ["банан", "яблоко", "груша"];
+words.sort();                   // ["банан", "груша", "яблоко"]
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Создайте массив с числами</li>
+                <li>Используйте методы push, pop, shift, unshift</li>
+                <li>Примените map, filter, reduce</li>
+                <li>Отсортируйте массив</li>
+                <li>Найдите элементы в массиве</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson11.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson13.html" class="nav-btn nav-btn-next">Следующий →</a>
+        </div>
+    </div>
+</body>
+</html>

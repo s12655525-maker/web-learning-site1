@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 16: Условия и циклы - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">JavaScript Основы</span>
+            <h1>Урок 16: Условия и циклы</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 35 минут</span>
+                <span>📊 Лёгкий</span>
+                <span>📄 JavaScript</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">🔀 Условные операторы</h2>
+            <div class="code-block">
+// if/else
+if (condition) {
+    // код
+} else if (otherCondition) {
+    // код
+} else {
+    // код
+}
+
+// Тернарный оператор
+const result = condition ? "да" : "нет";
+
+// Логическое И
+const value = obj && obj.prop; // Если obj существует
+
+// Логическое ИЛИ
+const name = inputName || "Гость"; // Значение по умолчанию
+
+// Опциональная цепочка
+const value = obj?.prop?.nested; // Безопасный доступ
+            </div>
+            <h2 class="section-title">🔄 Оператор switch</h2>
+            <div class="code-block">
+const day = "понедельник";
+
+switch (day) {
+    case "понедельник":
+        console.log("Рабочий день");
+        break;
+    case "субботка":
+    case "воскресенье":
+        console.log("Выходной");
+        break;
+    default:
+        console.log("Неизвестный день");
+}
+            </div>
+            <h2 class="section-title">🔁 Цикл for</h2>
+            <div class="code-block">
+// Классический for
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+// for...of (для массивов)
+const arr = [1, 2, 3];
+for (const item of arr) {
+    console.log(item);
+}
+
+// for...in (для объектов)
+const obj = { a: 1, b: 2 };
+for (const key in obj) {
+    console.log(key, obj[key]);
+}
+            </div>
+            <h2 class="section-title">⏮️ Циклы while</h2>
+            <div class="code-block">
+// while
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+
+// do...while (выполнится хотя бы раз)
+let j = 0;
+do {
+    console.log(j);
+    j++;
+} while (j < 5);
+            </div>
+            <h2 class="section-title">⏹️ Управление циклами</h2>
+            <div class="code-block">
+for (let i = 0; i < 10; i++) {
+    if (i === 3) {
+        continue; // Пропустить итерацию
+    }
+    if (i === 7) {
+        break; // Выйти из цикла
+    }
+    console.log(i);
+}
+// Вывод: 0, 1, 2, 4, 5, 6
+            </div>
+            <h2 class="section-title">🎯 Логические операторы</h2>
+            <div class="code-block">
+// И (&&)
+if (a > 0 && b > 0) { }
+
+// ИЛИ (||)
+if (a > 0 || b > 0) { }
+
+// НЕ (!)
+if (!isTrue) { }
+
+// Nullish coalescing
+const value = input ?? "default"; // Только для null/undefined
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Используйте if/else с разными условиями</li>
+                <li>Примените тернарный оператор</li>
+                <li>Создайте switch конструкцию</li>
+                <li>Напишите разные типы циклов</li>
+                <li>Используйте break и continue</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson15.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson17.html" class="nav-btn nav-btn-next">Следующий →</a>
+        </div>
+    </div>
+</body>
+</html>

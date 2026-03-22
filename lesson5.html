@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 5: Введение в CSS - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">CSS Основы</span>
+            <h1>Урок 5: Введение в CSS</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 30 минут</span>
+                <span>📊 Лёгкий</span>
+                <span>📄 CSS</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">🎨 Что такое CSS?</h2>
+            <p><strong>CSS (Cascading Style Sheets)</strong> — это язык стилей, который используется для описания внешнего вида HTML документов. Если HTML — это скелет страницы, то CSS — это её одежда и макияж.</p>
+            <p>CSS позволяет управлять:</p>
+            <ul>
+                <li>🎨 <strong>Цветами</strong> — текста, фона, границ</li>
+                <li>📝 <strong>Шрифтами</strong> — размером, типом, стилем</li>
+                <li>📐 <strong>Размерами</strong> — шириной, высотой, отступами</li>
+                <li>🔲 <strong>Позиционированием</strong> — где элементы находятся</li>
+                <li>🎭 <strong>Анимациями</strong> — движением и переходами</li>
+            </ul>
+            
+            <h2 class="section-title">📝 Подключение CSS</h2>
+            <div class="code-block">
+&lt;!-- Внешний файл (рекомендуется) --&gt;
+&lt;link rel="stylesheet" href="style.css"&gt;
+
+&lt;!-- Внутри HTML --&gt;
+&lt;style&gt;
+    h1 {
+        color: blue;
+    }
+&lt;/style&gt;
+
+&lt;!-- В атрибуте (не рекомендуется) --&gt;
+&lt;h1 style="color: red;"&gt;Заголовок&lt;/h1&gt;
+            </div>
+            
+            <h2 class="section-title">🎯 Селекторы</h2>
+            <div class="code-block">
+/* По тегу */
+h1 {
+    color: blue;
+}
+
+/* По классу */
+.highlight {
+    color: red;
+}
+
+/* По ID */
+#unique {
+    background: yellow;
+}
+
+/* Групповой */
+h1, h2, h3 {
+    font-family: Arial;
+}
+            </div>
+            
+            <h2 class="section-title">📦 Блочная модель</h2>
+            <div class="code-block">
+.box {
+    /* Содержимое */
+    width: 200px;
+    height: 100px;
+    
+    /* Внутренний отступ */
+    padding: 20px;
+    
+    /* Граница */
+    border: 2px solid black;
+    
+    /* Внешний отступ */
+    margin: 30px;
+}
+            </div>
+            
+            <h2 class="section-title">🎨 Основные свойства</h2>
+            <div class="code-block">
+/* Цвета */
+color: red;
+background-color: #ffffff;
+border-color: rgba(0, 0, 0, 0.5);
+
+/* Шрифты */
+font-family: Arial, sans-serif;
+font-size: 16px;
+font-weight: bold;
+
+/* Текст */
+text-align: center;
+text-decoration: underline;
+line-height: 1.5;
+
+/* Размеры */
+width: 100%;
+height: auto;
+max-width: 1200px;
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Подключите CSS файл к HTML</li>
+                <li>Используйте селекторы по тегу, классу и ID</li>
+                <li>Настройте цвета и шрифты</li>
+                <li>Примените блочную модель</li>
+                <li>Создайте несколько классов с разными стилями</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson4.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson6.html" class="nav-btn nav-btn-next">Следующий →</a>
+        </div>
+    </div>
+</body>
+</html>

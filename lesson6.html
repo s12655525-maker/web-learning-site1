@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 6: CSS Селекторы и свойства - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">CSS Основы</span>
+            <h1>Урок 6: CSS Селекторы и свойства</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 30 минут</span>
+                <span>📊 Средний</span>
+                <span>📄 CSS</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">🎯 Основные селекторы</h2>
+            <p>Селекторы определяют, к каким элементам применяются стили:</p>
+            <div class="code-block">
+/* По тегу */
+p {
+    color: black;
+}
+
+/* По классу */
+.highlight {
+    background: yellow;
+}
+
+/* По ID */
+#unique {
+    font-size: 20px;
+}
+
+/* Групповой селектор */
+h1,
+h2,
+h3 {
+    color: blue;
+}
+            </div>
+            <h2 class="section-title">🔗 Комбинаторы</h2>
+            <div class="code-block">
+/* Потомок */
+div p {
+    color: red;
+}
+
+/* Дочерний */
+div > p {
+    color: blue;
+}
+
+/* Сосед */
+h1 + p {
+    margin-top: 0;
+}
+
+/* Общий сосед */
+h1 ~ p {
+    color: green;
+}
+            </div>
+            <h2 class="section-title">✨ Псевдоклассы</h2>
+            <div class="code-block">
+a:hover {
+    color: red;
+}
+
+/* При наведении */
+a:visited {
+    color: purple;
+}
+
+/* Посещённая */
+a:active {
+    color: orange;
+}
+
+/* При нажатии */
+input:focus {
+    border: 2px solid blue;
+}
+
+li:first-child {
+    font-weight: bold;
+}
+
+li:last-child {
+    color: gray;
+}
+            </div>
+            <h2 class="section-title">📐 Свойства текста</h2>
+            <div class="code-block">
+p {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    text-decoration: underline;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Создайте страницу с разными селекторами</li>
+                <li>Используйте классы и ID</li>
+                <li>Примените псевдоклассы для ссылок</li>
+                <li>Настройте стили текста</li>
+                <li>Используйте комбинаторы</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson5.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson7.html" class="nav-btn nav-btn-next">Следующий →</a>
+        </div>
+    </div>
+</body>
+</html>

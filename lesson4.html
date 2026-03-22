@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 4: Таблицы и формы - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">HTML Структуры</span>
+            <h1>Урок 4: Таблицы и формы</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 35 минут</span>
+                <span>📊 Средний</span>
+                <span>📄 HTML</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">📊 Таблицы</h2>
+            <p>Таблицы создаются с помощью тегов <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code> и <code>&lt;td&gt;</code>:</p>
+            <div class="code-block">
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Имя&lt;/th&gt;
+            &lt;th&gt;Возраст&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Анна&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Иван&lt;/td&gt;
+            &lt;td&gt;30&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+            </div>
+            <h2 class="section-title">📝 Формы</h2>
+            <p>Формы собирают данные от пользователя:</p>
+            <div class="code-block">
+&lt;form action="/submit" method="POST"&gt;
+    &lt;label for="name"&gt;Имя:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    
+    &lt;label for="message"&gt;Сообщение:&lt;/label&gt;
+    &lt;textarea id="message" name="message" rows="4"&gt;&lt;/textarea&gt;
+    
+    &lt;button type="submit"&gt;Отправить&lt;/button&gt;
+&lt;/form&gt;
+            </div>
+            <h2 class="section-title">🔘 Типы полей ввода</h2>
+            <div class="code-block">
+&lt;input type="text"&gt;     &lt;!-- Текст --&gt;
+&lt;input type="password"&gt; &lt;!-- Пароль --&gt;
+&lt;input type="email"&gt;    &lt;!-- Email --&gt;
+&lt;input type="number"&gt;   &lt;!-- Число --&gt;
+&lt;input type="date"&gt;     &lt;!-- Дата --&gt;
+&lt;input type="checkbox"&gt; &lt;!-- Галочка --&gt;
+&lt;input type="radio"&gt;    &lt;!-- Радиокнопка --&gt;
+&lt;select&gt;                &lt;!-- Выпадающий список --&gt;
+    &lt;option&gt;Вариант 1&lt;/option&gt;
+    &lt;option&gt;Вариант 2&lt;/option&gt;
+&lt;/select&gt;
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Создайте таблицу с 3 столбцами и 5 строками</li>
+                <li>Добавьте заголовки таблицы</li>
+                <li>Создайте форму регистрации пользователя</li>
+                <li>Используйте разные типы полей ввода</li>
+                <li>Добавьте выпадающий список</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson3.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson5.html" class="nav-btn nav-btn-next">Следующий →</a>
+        </div>
+    </div>
+</body>
+</html>

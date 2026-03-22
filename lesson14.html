@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 14: DOM Манипуляции - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">JavaScript DOM</span>
+            <h1>Урок 14: DOM Манипуляции</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 50 минут</span>
+                <span>📊 Средний</span>
+                <span>📄 JavaScript</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">🔍 Поиск элементов</h2>
+            <div class="code-block">
+// По ID
+const el1 = document.getElementById("myId");
+
+// По селектору (один)
+const el2 = document.querySelector(".class");
+const el3 = document.querySelector("#id");
+
+// По селектору (все)
+const els1 = document.querySelectorAll(".class");
+const els2 = document.getElementsByTagName("div");
+const els3 = document.getElementsByClassName("class");
+            </div>
+            <h2 class="section-title">📝 Изменение содержимого</h2>
+            <div class="code-block">
+const el = document.querySelector("div");
+
+// Текст
+el.textContent = "Новый текст";
+el.innerText = "Текст с учётом стилей";
+
+// HTML
+el.innerHTML = "<span>Жирный текст</span>";
+
+// Атрибуты
+el.id = "newId";
+el.className = "newClass";
+el.setAttribute("data-value", "123");
+el.getAttribute("data-value"); // "123"
+            </div>
+            <h2 class="section-title">🎨 Работа со стилями</h2>
+            <div class="code-block">
+const el = document.querySelector("div");
+
+// Прямой стиль
+el.style.color = "red";
+el.style.backgroundColor = "blue";
+el.style.fontSize = "20px";
+
+// Классы
+el.classList.add("active");
+el.classList.remove("hidden");
+el.classList.toggle("visible");
+el.classList.contains("active"); // true
+
+// Все классы
+el.className = "class1 class2";
+            </div>
+            <h2 class="section-title">➕ Создание и удаление</h2>
+            <div class="code-block">
+// Создание
+const div = document.createElement("div");
+div.textContent = "Новый элемент";
+div.className = "new-element";
+
+// Добавление
+document.body.appendChild(div);
+parent.insertBefore(div, sibling);
+parent.append(div); // Множественное добавление
+
+// Удаление
+div.remove();
+parent.removeChild(div);
+
+// Замена
+parent.replaceChild(newElement, oldElement);
+            </div>
+            <h2 class="section-title">👨‍👩‍👧 Навигация по DOM</h2>
+            <div class="code-block">
+const el = document.querySelector("div");
+
+// Родитель и дети
+el.parentElement;
+el.children;       // Только элементы
+el.childNodes;     // Все узлы
+
+// Соседи
+el.previousElementSibling;
+el.nextElementSibling;
+el.previousSibling;
+el.nextSibling;
+
+// Первый/последний ребёнок
+el.firstElementChild;
+el.lastElementChild;
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Найдите элементы на странице</li>
+                <li>Измените содержимое элементов</li>
+                <li>Добавьте и удалите классы</li>
+                <li>Создайте новые элементы</li>
+                <li>Навигируйте по дереву DOM</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson13.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson15.html" class="nav-btn nav-btn-next">Следующий →</a>
+        </div>
+    </div>
+</body>
+</html>

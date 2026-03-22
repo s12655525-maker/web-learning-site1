@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 10: Переменные и типы данных - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">JavaScript Основы</span>
+            <h1>Урок 10: Переменные и типы данных</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 35 минут</span>
+                <span>📊 Лёгкий</span>
+                <span>📄 JavaScript</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">📦 Объявление переменных</h2>
+            <div class="code-block">
+let name = "Иван";      // Изменяемая
+const age = 25;         // Константа
+var old = "устарело";   // Устаревший способ
+            </div>
+            <h2 class="section-title">🔢 Типы данных</h2>
+            <div class="code-block">
+// Примитивные типы
+let str = "Текст";           // String
+let num = 42;                // Number
+let bool = true;             // Boolean
+let nothing = null;          // null
+let undef = undefined;       // undefined
+let sym = Symbol("id");      // Symbol
+let big = 9007199254740991n; // BigInt
+
+// Ссылочный тип
+let obj = { name: "Иван" };  // Object
+let arr = [1, 2, 3];         // Array
+            </div>
+            <h2 class="section-title">🔄 Преобразование типов</h2>
+            <div class="code-block">
+// В строку
+String(123);        // "123"
+String(true);       // "true"
+123 + "";           // "123"
+
+// В число
+Number("123");      // 123
+Number("abc");      // NaN
++"123";             // 123
+
+// В логическое
+Boolean(0);         // false
+Boolean(1);         // true
+!!"text";           // true
+            </div>
+            <h2 class="section-title">✅ Проверка типов</h2>
+            <div class="code-block">
+typeof 42;           // "number"
+typeof "text";       // "string"
+typeof true;         // "boolean"
+typeof undefined;    // "undefined"
+typeof null;         // "object" (историческая особенность)
+typeof {};           // "object"
+typeof [];           // "object"
+
+// Проверка массива
+Array.isArray([1,2]); // true
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Объявите переменные разных типов</li>
+                <li>Выполните преобразование типов</li>
+                <li>Проверьте типы переменных</li>
+                <li>Создайте объект и массив</li>
+                <li>Используйте const и let правильно</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson9.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson11.html" class="nav-btn nav-btn-next">Следующий →</a>
+        </div>
+    </div>
+</body>
+</html>

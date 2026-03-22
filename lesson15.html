@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 15: События - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">JavaScript События</span>
+            <h1>Урок 15: События</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 45 минут</span>
+                <span>📊 Средний</span>
+                <span>📄 JavaScript</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">🎯 Основные события</h2>
+            <div class="code-block">
+// Мышь
+click          // Клик
+dblclick       // Двойной клик
+mouseover      // Наведение
+mouseout       // Уход курсора
+mousemove      // Движение мыши
+mousedown      // Нажатие кнопки
+mouseup        // Отпускание кнопки
+
+// Клавиатура
+keydown        // Нажатие клавиши
+keyup          // Отпускание клавиши
+keypress       // Нажатие символьной клавиши
+
+// Форма
+submit         // Отправка формы
+change         // Изменение значения
+input          // Ввод данных
+focus          // Получение фокуса
+blur           // Потеря фокуса
+
+// Документ
+DOMContentLoaded // Загрузка DOM
+load            // Полная загрузка
+resize          // Изменение размера
+scroll          // Прокрутка
+            </div>
+            <h2 class="section-title">🔧 Добавление обработчиков</h2>
+            <div class="code-block">
+const btn = document.querySelector("button");
+
+// Метод addEventListener (рекомендуется)
+btn.addEventListener("click", function(event) {
+    console.log("Клик!", event);
+});
+
+// Стрелочная функция
+btn.addEventListener("click", (e) => {
+    e.preventDefault(); // Предотвратить действие по умолчанию
+    console.log("Клик!");
+});
+
+// Именованная функция
+function handleClick(e) {
+    console.log("Клик!");
+}
+btn.addEventListener("click", handleClick);
+
+// Удаление обработчика
+btn.removeEventListener("click", handleClick);
+            </div>
+            <h2 class="section-title">📋 Объект события</h2>
+            <div class="code-block">
+document.addEventListener("click", function(e) {
+    console.log(e.type);        // "click"
+    console.log(e.target);      // Элемент, на который кликнули
+    console.log(e.currentTarget); // Элемент с обработчиком
+    
+    // Координаты
+    console.log(e.clientX, e.clientY); // Относительно viewport
+    console.log(e.pageX, e.pageY);     // Относительно документа
+    
+    // Модификаторы
+    console.log(e.ctrlKey);
+    console.log(e.shiftKey);
+    console.log(e.altKey);
+});
+            </div>
+            <h2 class="section-title">🔄 Делегирование событий</h2>
+            <div class="code-block">
+// Вместо обработчика на каждом элементе
+document.querySelectorAll(".item").forEach(item => {
+    item.addEventListener("click", handleClick);
+});
+
+// Один обработчик на родителе
+document.querySelector(".container").addEventListener("click", function(e) {
+    if (e.target.classList.contains("item")) {
+        handleClick(e);
+    }
+});
+            </div>
+            <h2 class="section-title">⚡ Custom Events</h2>
+            <div class="code-block">
+// Создание события
+const event = new CustomEvent("myEvent", {
+    detail: { message: "Привет!" }
+});
+
+// Отправка события
+document.dispatchEvent(event);
+
+// Прослушивание события
+document.addEventListener("myEvent", function(e) {
+    console.log(e.detail.message); // "Привет!"
+});
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Добавьте обработчики кликов</li>
+                <li>Используйте события клавиатуры</li>
+                <li>Работайте с объектом события</li>
+                <li>Реализуйте делегирование событий</li>
+                <li>Создайте и отправьте custom event</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson14.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson16.html" class="nav-btn nav-btn-next">Следующий →</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 19: Оптимизация и деплой - Web Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lesson-page">
+        <a href="lessons.html" class="back-btn">← Вернуться к урокам</a>
+        <div class="lesson-header">
+            <div class="lesson-decoration">
+                <span class="decoration-dot dot-1"></span>
+                <span class="decoration-dot dot-2"></span>
+                <span class="decoration-dot dot-3"></span>
+            </div>
+            <span class="lesson-badge">DevOps</span>
+            <h1>Урок 19: Оптимизация и деплой</h1>
+            <div class="lesson-meta">
+                <span>⏱️ 40 минут</span>
+                <span>📊 Средний</span>
+                <span>📄 Разное</span>
+            </div>
+        </div>
+        <div class="lesson-content">
+            <h2 class="section-title">⚡ Оптимизация производительности</h2>
+            <div class="code-block">
+/* Минификация CSS */
+/* До */
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* После */
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Оптимизация изображений */
+img {
+    width: 100%;
+    height: auto;
+    loading: lazy; /* Ленивая загрузка */
+}
+            </div>
+            <h2 class="section-title">📦 Сжатие ресурсов</h2>
+            <div class="code-block">
+<!-- Gzip сжатие (на сервере) -->
+<!-- .htaccess для Apache -->
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript
+</IfModule>
+
+<!-- Brotli сжатие (быстрее Gzip) -->
+<!-- Настраивается на сервере -->
+
+<!-- Кэширование -->
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+</IfModule>
+            </div>
+            <h2 class="section-title">🎯 SEO оптимизация</h2>
+            <div class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    
+    &lt;!-- Мета теги --&gt;
+    &lt;meta name="description" content="Описание страницы"&gt;
+    &lt;meta name="keywords" content="ключевые, слова"&gt;
+    &lt;meta name="author" content="Автор"&gt;
+    
+    &lt;!-- Open Graph --&gt;
+    &lt;meta property="og:title" content="Заголовок"&gt;
+    &lt;meta property="og:description" content="Описание"&gt;
+    &lt;meta property="og:image" content="image.jpg"&gt;
+    
+    &lt;title&gt;Заголовок страницы&lt;/title&gt;
+&lt;/head&gt;
+            </div>
+            <h2 class="section-title">🚀 Деплой на GitHub Pages</h2>
+            <div class="code-block">
+# 1. Создать репозиторий на GitHub
+
+# 2. Инициализировать Git
+git init
+git add .
+git commit -m "Initial commit"
+
+# 3. Подключить к GitHub
+git remote add origin https://github.com/username/repo.git
+git branch -M main
+git push -u origin main
+
+# 4. Включить GitHub Pages
+# Settings -> Pages -> Source: main branch
+            </div>
+            <h2 class="section-title">☁️ Бесплатные хостинги</h2>
+            <div class="code-block">
+/* GitHub Pages */
+/* - Бесплатно */
+/* - Статические сайты */
+/* - Автоматический деплой из Git */
+
+/* Netlify */
+/* - Бесплатно */
+/* - Непрерывный деплой */
+/* - Формы и функции */
+
+/* Vercel */
+/* - Бесплатно */
+/* - Оптимизация изображений */
+/* - Preview деплои */
+
+/* Cloudflare Pages */
+/* - Бесплатно */
+/* - CDN */
+/* - DDoS защита */
+            </div>
+            <h2 class="section-title">🔧 Инструменты оптимизации</h2>
+            <div class="code-block">
+/* Lighthouse - аудит производительности */
+/* PageSpeed Insights - Google */
+/* WebPageTest - детальный анализ */
+
+/* Минификаторы */
+/* - CSSNano */
+/* - Terser (JS) */
+/* - HTMLMinifier */
+
+/* Оптимизация изображений */
+/* - ImageOptim */
+/* - TinyPNG */
+/* - Squoosh */
+            </div>
+        </div>
+        <div class="homework">
+            <h2>📝 Домашнее задание</h2>
+            <ol>
+                <li>Оптимизируйте CSS и HTML</li>
+                <li>Сожмите изображения</li>
+                <li>Добавьте мета теги для SEO</li>
+                <li>Разверните сайт на GitHub Pages</li>
+                <li>Протестируйте производительность с Lighthouse</li>
+            </ol>
+        </div>
+        <div class="lesson-nav">
+            <a href="lesson18.html" class="nav-btn">← Предыдущий</a>
+            <a href="lesson20.html" class="nav-btn nav-btn-next">Финальный проект →</a>
+        </div>
+    </div>
+</body>
+</html>
